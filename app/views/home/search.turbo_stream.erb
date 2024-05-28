@@ -1,0 +1,4 @@
+<%= turbo_stream.update "dog_search_results", "" %>
+<%= turbo_stream.append "dog_search_results" do %>
+  <%= render partial: "home/search", locals: { image: @image } %>
+<% end %>

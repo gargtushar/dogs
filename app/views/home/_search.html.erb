@@ -1,0 +1,7 @@
+<div class= "flex flex-col justify-center items-center md:flex-row md:flex-wrap">
+  <% if image.blank? %>
+    <h1 class="text-sm">No Dog Image Found.</h1>
+  <% else %>
+    <%= image_tag image, alt: 'Dog Image', class: 'm-1 p-1 object-cover h-48 w-96' %>
+  <% end %> 
+</div>

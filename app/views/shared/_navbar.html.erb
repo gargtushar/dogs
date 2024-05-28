@@ -1,0 +1,13 @@
+<div">
+  <nav class="bg-gray-700">
+    <div class="container space-x-4  py-4 flex justify-start items-center">
+      <h1 class="text-2xl mx-2 font-bold text-gray-50 w-1/4">Dogs</h1>
+      <%= form_with url: search_path(format: :turbo_stream), method: :get, data: { turbo_frame: "dog_search_results" }, class: "flex mx-2 px-2 space-x-4 justify-center items-start w-3/4" do |form| %>
+        <div class="flex rounded-lg overflow-hidden w-full">
+          <%= form.text_field :query, placeholder: "Search for a dog breed", class: "w-full rounded-md rounded-r-none", required: true %>
+          <%= form.submit "Search", class: "text-gray-700 bg-slate-200 hover:bg-slate-100 px-6 text-lg font-semibold py-4 rounded-r-md" %>
+        </div>
+      <% end %>
+    </div>
+  </nav>
+</div>

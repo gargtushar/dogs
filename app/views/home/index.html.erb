@@ -1,0 +1,9 @@
+<div class="container">
+  <%= turbo_frame_tag "dog_search_results" do %>
+    <div class= "flex flex-col justify-center items-center md:flex-row md:flex-wrap">
+      <% if @image.present? %>
+        <%= image_tag @image, alt: 'Dog Image', class: 'm-1 p-1 object-cover h-48 w-96' %>
+      <% end %> 
+    </div>
+  <% end %>
+</div>

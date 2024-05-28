@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "start": "yarn build && bin/rails s",
+    "watch": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --watch",
+    "css:build": "tailwindcss build -o ./app/assets/stylesheets/application.tailwind.css",
+    "css:watch": "tailwindcss build -o ./app/assets/stylesheets/application.tailwind.css --watch"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.4",
+    "esbuild": "^0.21.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
